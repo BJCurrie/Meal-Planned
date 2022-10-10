@@ -246,6 +246,7 @@ const recipe8 = {
 // List of all recipes
 let recipes = [recipe1, recipe2, recipe3, recipe4, recipe5, recipe6, recipe7, recipe8];
 
+
 // Random meal plan
 let randomPlan = [];
 
@@ -256,11 +257,18 @@ const open = 'Your weekly meal plan has been randomised for you as follows:';
 const pantry = 'Please ensure you have the following ingredients:';
 
 
-// Function to generate a random number from 0 to max
+// Function to generate a random number from 0 to any given number (parameter: max)
 function randomNumberGenerator(max) {
-    return Math.floor(Math.random()*(maximum+1));
+    return Math.floor(Math.random()*(max+1));
 }
 
+
+// Function to add a random recipe to the meal plan and then remove it from the available recipes
+function moveRandom(aLength) {
+    let randIndex = randomNumberGenerator(aLength - 1);
+    randomPlan.push(recipes[randIndex]);
+    recipes.splice(randIndex, 1);
+}
 
 
 
