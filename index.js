@@ -271,5 +271,11 @@ function moveRandom(aLength) {
 }
 
 
+// Function to create a random weekday meal plan (5 meals)
+function randMealPlanGenerator() {
+    while (randomPlan.length < 5) {
+        moveRandom(recipes.length);
+    }
+}
 
 
