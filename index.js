@@ -242,15 +242,24 @@ const recipe8 = {
     ]
 }
 
-//list of all recipes
+
+// List of all recipes
 let recipes = [recipe1, recipe2, recipe3, recipe4, recipe5, recipe6, recipe7, recipe8];
+
+// Random meal plan
+let randomPlan = [];
+
 
 // Stored strings to be printed out to the user
 const greeting = 'Hello fellow time efficient GitHub chef,';
 const open = 'Your weekly meal plan has been randomised for you as follows:';
 const pantry = 'Please ensure you have the following ingredients:';
 
-console.log(recipes)
+
+// Function to generate a random number from 0 to max
+function randomNumberGenerator(max) {
+    return Math.floor(Math.random()*(maximum+1));
+}
 
 
 
