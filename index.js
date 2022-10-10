@@ -1,5 +1,5 @@
-// Stored recipes
-recipe1 = {
+// Stored recipes (line 1 - 243)
+const recipe1 = {
     recipe: 'Pesto Pasta',
     ingredients: [
         {
@@ -20,7 +20,7 @@ recipe1 = {
     ]
 }
 
-recipe2 = {
+const recipe2 = {
     recipe: 'Garlic Tofu and Broccoli',
     ingredients: [
         {
@@ -46,7 +46,7 @@ recipe2 = {
     ]
 }
 
-recipe3 = {
+const recipe3 = {
     recipe: 'Vegetable Topped Potato',
     ingredients: [
         {
@@ -82,7 +82,7 @@ recipe3 = {
     ]
 }
 
-recipe4 = {
+const recipe4 = {
     recipe: 'Mushroom Ramen',
     ingredients: [
         {
@@ -113,7 +113,7 @@ recipe4 = {
     ]
 }
 
-recipe5 = {
+const recipe5 = {
     recipe: 'Classic Burgers',
     ingredients: [
         {
@@ -139,7 +139,7 @@ recipe5 = {
     ]
 }
 
-recipe6 = {
+const recipe6 = {
     recipe: 'Chickpea Curry',
     ingredients: [
         {
@@ -175,7 +175,7 @@ recipe6 = {
     ]
 }
 
-recipe7 = {
+const recipe7 = {
     recipe: 'Cauliflower Curry',
     ingredients: [
         {
@@ -206,7 +206,7 @@ recipe7 = {
     ]
 }
 
-recipe8 = {
+const recipe8 = {
     recipe: 'Tofu Fried Rice',
     ingredients: [
         {
@@ -242,10 +242,15 @@ recipe8 = {
     ]
 }
 
+//list of all recipes
+let recipes = [recipe1, recipe2, recipe3, recipe4, recipe5, recipe6, recipe7, recipe8];
+
 // Stored strings to be printed out to the user
-const greeting = 'Hello fellow time efficient GitHub chef,'
-const open = 'Your weekly meal plan has been randomised for you as follows:'
-const pantry = 'Please ensure you have the following ingredients:'
+const greeting = 'Hello fellow time efficient GitHub chef,';
+const open = 'Your weekly meal plan has been randomised for you as follows:';
+const pantry = 'Please ensure you have the following ingredients:';
+
+console.log(recipes)
 
 
 
