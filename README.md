@@ -3,7 +3,7 @@
 
 
 ## General Info
-Time spent deciding what to have for dinner and creating shopping lists adds up. This time can be significantly reduced through the use of a meal plan. However, many people dislike the repetitivity of a single meal plan.
+Time spent deciding what to have for dinner and creating shopping lists adds up. This time can be significantly reduced through the use of a meal plan. However, many people find keeping the same meal plan to be very repetitive.
 
 Meal Planned is a JS script that uses a list of stored recipes to produce a randomised weekly meal plan, along with the required ingredients. Meal Planned enables users to enjoy the time savings of manual meal planning, without the monotonousness.
 
@@ -14,6 +14,38 @@ Project developed and tested using:
 * Node.js version: 16.17.1
 * Visual Studio Code: 1.72.0
 
+## Example Output
+```
+
+Hello fellow time efficient GitHub chef,
+
+
+Your weekly meal plan has been randomised for you as follows:
+
+
+|   Monday: Garlic Tofu and Broccoli   |   Tuesday: Classic Burgers   |   Wednesday: Chickpea Curry   |   Thursday: Mushroom Ramen   |   Friday: Tofu Fried Rice   | 
+
+
+You will require the following ingredients: 
+
+    - Tofu: 600g
+    - Broccoli: 1 head
+    - Garlic: 14 cloves
+    - Rice: 3 cups
+    - Burger Patties: 2
+    - Burger Buns: 2
+    - Mixed Salad: 40g
+    - Gherkins: 2
+    - Chickpeas: 200g
+    - Tomatoes: 100g
+    - Yellow Onions: 3
+    - Lemons: 1
+    - Mushrooms: 150g
+    - Stock Cubes: 4
+    - Spring Onions: 8
+    - Noodles: 200g
+    - Sweetcorn: 100g
+```
 
 ## Usage
 Please feel free to use / copy / adjust your own copy of the script as you wish.
