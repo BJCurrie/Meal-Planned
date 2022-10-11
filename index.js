@@ -31,17 +31,17 @@ const recipe2 = {
         {
         ingredient: 'Broccoli',
         quantity: 1,
-        measurement: 'head'
+        measurement: ' head'
         },
         {
         ingredient: 'Garlic',
         quantity: 4,
-        measurement: 'cloves'
+        measurement: ' cloves'
         },
         {
         ingredient: 'Rice',
         quantity: 1,
-        measurement: 'cups'
+        measurement: ' cups'
         }
     ]
 }
@@ -67,7 +67,7 @@ const recipe3 = {
         {
         ingredient: 'Garlic',
         quantity: 3,
-        measurement: 'cloves'
+        measurement: ' cloves'
         },
         {
         ingredient: 'Spinach',
@@ -103,7 +103,7 @@ const recipe4 = {
         {
         ingredient: 'Garlic',
         quantity: 2,
-        measurement: 'cloves'
+        measurement: ' cloves'
         },
         {
         ingredient: 'Noodles',
@@ -160,7 +160,7 @@ const recipe6 = {
         {
         ingredient: 'Garlic',
         quantity: 4,
-        measurement: 'cloves'
+        measurement: ' cloves'
         },
         {
         ingredient: 'Lemons',
@@ -170,7 +170,7 @@ const recipe6 = {
         {
         ingredient: 'Rice',
         quantity: 1,
-        measurement: 'cups'
+        measurement: ' cups'
         }
     ]
 }
@@ -181,7 +181,7 @@ const recipe7 = {
         {
         ingredient: 'Cauliflower',
         quantity: 1,
-        measurement: 'head'
+        measurement: ' head'
         },
         {
         ingredient: 'Coconut Milk',
@@ -196,12 +196,12 @@ const recipe7 = {
         {
         ingredient: 'Garlic',
         quantity: 3,
-        measurement: 'cloves'
+        measurement: ' cloves'
         },
         {
         ingredient: 'Rice',
         quantity: 1,
-        measurement: 'cups'
+        measurement: ' cups'
         }
     ]
 }
@@ -232,12 +232,12 @@ const recipe8 = {
         {
         ingredient: 'Garlic',
         quantity: 4,
-        measurement: 'cloves'
+        measurement: ' cloves'
         },
         {
         ingredient: 'Rice',
         quantity: 1,
-        measurement: 'cups'
+        measurement: ' cups'
         }
     ]
 }
@@ -254,7 +254,7 @@ let randomPlan = [];
 // Stored strings to be printed out to the user
 const greeting = 'Hello fellow time efficient GitHub chef,';
 const open = 'Your weekly meal plan has been randomised for you as follows:';
-const pantry = 'Please ensure you have the following ingredients:';
+const pantryOpen = 'Please ensure you have the following ingredients:';
 
 
 // Function to generate a random number from 0 to any given number (parameter: max)
@@ -280,7 +280,7 @@ function randMealPlanGenerator() {
 
 
 // Ingredients list
-let ingredientsList = []
+let ingredientsList = [];
 
 
 // Function to check if an ingredient is already in the ingredient list and if so, return it's index
@@ -301,7 +301,6 @@ function calculateIngredients() {
             if (ingredientIndex === -1) {
                 ingredientsList.push(newIngred);
             } else {
-                console.log()
                 ingredientsList[ingredientIndex].quantity += newIngred.quantity;
             }
         }
@@ -309,8 +308,44 @@ function calculateIngredients() {
 }
 
 
-function messageDisplay() {
+// Days of the week, to be used to create an output string
+const weekdays = ['|   Monday: ', '   |   Tuesday: ', '   |   Wednesday: ', '   |   Thursday: ', '   |   Friday: '];
 
+
+// Empty string to be updated and output
+let mealPlanString = '';
+
+
+// Forms meal plan and string for output
+randMealPlanGenerator();
+randomPlan.forEach(meal => {
+    let stringPart = weekdays.shift() + meal.recipe;
+    mealPlanString += stringPart;
+})
+mealPlanString += '   |';
+
+
+// Empty string to be updated and output
+let pantryString = '';
+
+
+// Forms ingredient list and string for output
+calculateIngredients();
+ingredientsList.forEach(ingred => {
+    let stringPart = `    - ${ingred.ingredient}: ${ingred.quantity}${ingred.measurement}\n`;
+    pantryString += stringPart;
+})
+
+// Function to display programme output to user
+function messageDisplay() {
+    console.log(greeting, '\n\n');
+    console.log(open, '\n\n');
+    console.log(mealPlanString, '\n\n');
+    console.log(pantryOpen, '\n');
+    console.log(pantryString);
 }
 
+
+// Calls message display function to provide user with programme output
+messageDisplay();
 
