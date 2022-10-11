@@ -319,8 +319,7 @@ let mealPlanString = '';
 // Forms meal plan and string for output
 randMealPlanGenerator();
 randomPlan.forEach(meal => {
-    let stringPart = weekdays.shift() + meal.recipe;
-    mealPlanString += stringPart;
+    mealPlanString += weekdays.shift() + meal.recipe;
 })
 mealPlanString += '   |';
 
@@ -332,8 +331,7 @@ let pantryString = '';
 // Forms ingredient list and string for output
 calculateIngredients();
 ingredientsList.forEach(ingred => {
-    let stringPart = `    - ${ingred.ingredient}: ${ingred.quantity}${ingred.measurement}\n`;
-    pantryString += stringPart;
+    pantryString += `    - ${ingred.ingredient}: ${ingred.quantity}${ingred.measurement}\n`;
 })
 
 // Function to display programme output to user
