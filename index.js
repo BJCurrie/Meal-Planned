@@ -252,9 +252,9 @@ let randomPlan = [];
 
 
 // Stored strings to be printed out to the user
-const greeting = 'Hello fellow time efficient GitHub chef,';
+const greeting = '\nHello fellow time efficient GitHub chef,';
 const open = 'Your weekly meal plan has been randomised for you as follows:';
-const pantryOpen = 'Please ensure you have the following ingredients:';
+const pantryOpen = 'You will require the following ingredients:';
 
 
 // Function to generate a random number from 0 to any given number (parameter: max)
