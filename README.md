@@ -1,6 +1,5 @@
 # Meal Planned
-
-#### JavaScript Portfolio Project by Ben Currie
+###### JavaScript Portfolio Project by Ben Currie
 
 
 ## General Info
