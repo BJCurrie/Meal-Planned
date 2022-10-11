@@ -279,3 +279,38 @@ function randMealPlanGenerator() {
 }
 
 
+// Ingredients list
+let ingredientsList = []
+
+
+// Function to check if an ingredient is already in the ingredient list and if so, return it's index
+function ingredientCheck(check) {
+    for (let i = 0; i < ingredientsList.length; i++) {
+        if (ingredientsList[i].ingredient === check) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+// Function that takes all the ingredients for the random meal plan and adds them to a list, whilst also adding together the quantities of ingredients with the same name to remove duplicates
+function calculateIngredients() {
+    for (meal of randomPlan) {
+        for (newIngred of meal.ingredients) {
+            let ingredientIndex = ingredientCheck(newIngred.ingredient);
+            if (ingredientIndex === -1) {
+                ingredientsList.push(newIngred);
+            } else {
+                console.log()
+                ingredientsList[ingredientIndex].quantity += newIngred.quantity;
+            }
+        }
+    }
+}
+
+
+function messageDisplay() {
+
+}
+
+
